@@ -97,7 +97,14 @@ function agregarLinea() {
     lineaNombre.last().appendTo('body');
     lineaNombre.last().attr('id','tnombre' + (tnombrelength));
     tnombrelength+=1;
+    console.log(tnombrelength);
 }
-// $('.lineaNombre').first().attr('id','tnombre0');
+function removerLinea() {
+    $(".lineaNombre").click(function(e) {
+        $(this).remove();
+    });
+    tnombrelength-=1;
+    console.log(tnombrelength);
+}
 
 
