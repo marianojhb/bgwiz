@@ -1,0 +1,85 @@
+/* CSS */
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+}
+
+body{
+    font-size:1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width:90%;
+    box-sizing: border-box;
+    margin:0 auto;
+    position:relative;
+}
+
+.doctitle{
+    text-align: center;
+}
+form {
+    box-sizing: border-box;
+    max-width: 100%;
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+}
+
+.number {
+    text-align: right;
+
+}
+
+.boxed{
+    box-shadow: 5px 5px 5px 0 black;
+    padding: 2rem;
+    border: 1px solid lightgrey;
+    margin: 2rem;
+    position:relative;
+    box-sizing: border-box;
+}
+
+button{
+    padding:1rem;
+    display: inline-block;
+}
+
+/* .botonAgregar {
+    position: relative;
+    display: inline-block;
+    bottom:-35px;
+    left:-24px;
+    /* border: 2px solid red; */
+    width:1rem;
+} */
+
+.botonEnviar button {
+    border: 3px;
+    background-color: red;
+}
+
+
+.enviar{
+    display:block;
+    /* border: 2px solid orange; */
+    text-align:center;
+    min-height:10rem;
+}
+
+.enviar button{
+    display: inline-block;
+}
+
+input[type=number] {
+    width: 6rem;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+}
