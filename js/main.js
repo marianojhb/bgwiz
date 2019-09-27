@@ -82,34 +82,47 @@
 // }
 
 
-var linea = [];
- linea0.oninput = () => {
+var linealength = 1; // cantidad de lineas
+
+var linea = []; // array con cada linea
+
+// logueo cada tecla solo en la linea 0
+linea0.oninput = () => {
     var tnombre = [];
     var tapellido = [];
-    tnombre[0] = document.getElementsByName("tnombre")[0].value;
-    tapellido[0] = document.getElementsByName("tapellido")[0].value;
-    console.log(tnombre[0]);
-    console.log(tapellido[0]);
-    for (let i=0; i<linealength;i++) {
-        tnombre[i] = document.getElementsByName("tnombre")[i].value;
-        tapellido[i] = document.getElementsByName("tapellido")[i].value;
+        tnombre[0] = document.getElementsByName("tnombre")[0].value;
+        tapellido[0] = document.getElementsByName("tapellido")[0].value;
+        console.log(tnombre[0] + ' ' + tapellido[0]);
     }
-}
 
-var linealength = 1;
+// linea0.oninput = () => {
+//     var tnombre = [];
+//     var tapellido = [];
+//     for (let i=0; i<linealength;i++) {
+//         tnombre[i] = document.getElementsByName("tnombre")[i].value;
+//         tapellido[i] = document.getElementsByName("tapellido")[i].value;
+//         console.log(tnombre[i] + ' ' + tapellido[i]);
+//     }
+// }
+
+
+
+// boton agregar  para nuevas lineas. ver que linealenght se incrementa
 function agregarLinea() {
     var linea= $('.linea').clone();
     linea.last().appendTo('body');
     linea.last().attr('id','linea' + (linealength));
     linealength+=1;
-    console.log(linealength);
+    console.log(linealength); // confirmo el tamaño del array se corresponda con la cantidad de secciones visibles
 }
+
+// boton remover linea 
 function removerLinea() {
     $(".linea").click(function(e) {
         $(this).remove();
     });
     linealength-=1;
-    console.log(linealength);
+    console.log(linealength); // confirmo el tamaño del array se corresponda con la cantidad de lineas visibles
 }
 
 
