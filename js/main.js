@@ -82,29 +82,34 @@
 // }
 
 
-tnombre0.oninput = () => {
-    var tnombre = new Array();
+var linea = [];
+ linea0.oninput = () => {
+    var tnombre = [];
+    var tapellido = [];
     tnombre[0] = document.getElementsByName("tnombre")[0].value;
-    for (let i=0; i<tnombrelength;i++) {
-        tnombre[i] = document.getElementsByName("tnombre")[i].value;
-    }
+    tapellido[0] = document.getElementsByName("tapellido")[0].value;
     console.log(tnombre[0]);
+    console.log(tapellido[0]);
+    for (let i=0; i<linealength;i++) {
+        tnombre[i] = document.getElementsByName("tnombre")[i].value;
+        tapellido[i] = document.getElementsByName("tapellido")[i].value;
+    }
 }
 
-var tnombrelength = 1;
+var linealength = 1;
 function agregarLinea() {
-    var lineaNombre = $('.lineaNombre').clone();
-    lineaNombre.last().appendTo('body');
-    lineaNombre.last().attr('id','tnombre' + (tnombrelength));
-    tnombrelength+=1;
-    console.log(tnombrelength);
+    var linea= $('.linea').clone();
+    linea.last().appendTo('body');
+    linea.last().attr('id','linea' + (linealength));
+    linealength+=1;
+    console.log(linealength);
 }
 function removerLinea() {
-    $(".lineaNombre").click(function(e) {
+    $(".linea").click(function(e) {
         $(this).remove();
     });
-    tnombrelength-=1;
-    console.log(tnombrelength);
+    linealength-=1;
+    console.log(linealength);
 }
 
 
