@@ -87,23 +87,20 @@ var linealength = 1; // cantidad de lineas
 var linea = []; // array con cada linea
 
 // logueo cada tecla solo en la linea 0
-linea0.oninput = () => {
-    var tnombre = [];
-    var tapellido = [];
-        tnombre[0] = document.getElementsByName("tnombre")[0].value;
-        tapellido[0] = document.getElementsByName("tapellido")[0].value;
-        console.log(tnombre[0] + ' ' + tapellido[0]);
-    }
-
 // linea0.oninput = () => {
 //     var tnombre = [];
 //     var tapellido = [];
-//     for (let i=0; i<linealength;i++) {
-//         tnombre[i] = document.getElementsByName("tnombre")[i].value;
-//         tapellido[i] = document.getElementsByName("tapellido")[i].value;
-//         console.log(tnombre[i] + ' ' + tapellido[i]);
+//         tnombre[0] = document.getElementsByName("tnombre")[0].value;
+//         tapellido[0] = document.getElementsByName("tapellido")[0].value;
+//         console.log(tnombre[0] + ' ' + tapellido[0]);
 //     }
-// }
+
+
+
+
+var tnombre = [];
+var tapellido = [];
+
 
 
 
@@ -114,7 +111,7 @@ function agregarLinea() {
     linea.last().attr('id','linea' + (linealength));
     linealength+=1;
     console.log(linealength); // confirmo el tamaño del array se corresponda con la cantidad de secciones visibles
-}
+}   
 
 // boton remover linea 
 function removerLinea() {
@@ -126,3 +123,11 @@ function removerLinea() {
 }
 
 
+detalle.oninput = () => {
+    $("input[name='tnombre']").each(function() {
+        console.log(this.value);
+    });
+    $("input[name='tapellido']").each(function() {
+        console.log(this.value);
+    });
+    }
